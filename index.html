@@ -2,144 +2,105 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Server Status</title>
 
 <style>
-    body {
-        margin: 0;
-        background: #000;
-        font-family: Arial, Helvetica, sans-serif;
-        color: #fff;
-    }
+body{
+    font-family: Arial, sans-serif;
+    background:#0b0f1a;
+    color:#fff;
+    text-align:center;
+}
 
-    .container {
-        max-width: 420px;
-        margin: 30px auto;
-        padding: 20px;
-        border-radius: 20px;
-        box-shadow: 0 0 20px #00eaff;
-        background: #050505;
-    }
+/* LOGO IMAGE */
+.logo img{
+    width:120px;          /* logo size */
+    height:auto;
+    margin:20px auto;
+    display:block;
+}
 
-    .logo {
-        width: 120px;
-        height: 120px;
-        margin: auto;
-        border-radius: 50%;
-        background: #fff;
-        box-shadow: 0 0 25px #00eaff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        color: #b30059;
-        font-size: 32px;
-    }
+/* TITLE & STATUS */
+.title{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:10px;
+}
 
-    .logo span {
-        font-size: 14px;
-        display: block;
-        text-align: center;
-        color: #b30059;
-    }
+.status{
+    color:#00ff88;
+    margin-bottom:20px;
+}
 
-    .title {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 26px;
-        color: #00eaff;
-        text-shadow: 0 0 10px #00eaff;
-    }
+/* BOX */
+.box{
+    background:#11162a;
+    border-radius:12px;
+    padding:15px;
+    margin:15px auto;
+    width:90%;
+    max-width:400px;
+    box-shadow:0 0 15px rgba(0,255,255,0.15);
+}
 
-    .status {
-        text-align: center;
-        margin-bottom: 25px;
-        color: #ccc;
-    }
-
-    .box {
-        border: 2px dashed #00eaff;
-        border-radius: 15px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 0 15px rgba(0,234,255,0.3);
-    }
-
-    .box h3 {
-        margin: 0 0 15px;
-        text-align: center;
-        font-weight: normal;
-    }
-
-    .btn {
-        display: block;
-        width: 100%;
-        padding: 14px;
-        border-radius: 12px;
-        border: none;
-        background: #00cfff;
-        color: #000;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        box-shadow: 0 0 15px #00eaff;
-    }
-
-    .btn:active {
-        transform: scale(0.97);
-    }
+.btn{
+    background:#00c8ff;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+.btn:hover{
+    background:#00ffcc;
+}
 </style>
+
+<script>
+function copyKey(text){
+    navigator.clipboard.writeText(text);
+    alert("VLESS Key Copied!");
+}
+</script>
 </head>
 
 <body>
 
-<div class="container">
-
-    <div class="logo">YO<br><span>PLUS</span></div>
-
-    <div class="title">SERVER IS RUNNING</div>
-    <div class="status">| Status: Active</div>
-
-    <div class="box">
-        <h3>Ais 64Kbps</h3>
-        <button class="btn" onclick="copyKey('vless://0eadb1f1-8adb-456e-b37d-4a687eec131f@162.159.153.41:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=www.speedtest.net-yaw.lawtaung.de5.net&fp=random&type=ws&sni=www.speedtest.net-yaw.lawtaung.de5.net#Ais%2064Kbps%20Cf')">
-            COPY VLESS Key
-        </button>
-    </div>
-
-    <div class="box">
-        <h3>True Vdo</h3>
-        <button class="btn" onclick="copyKey('vless://TRUE-VDO-KEY-HERE')">
-            COPY VLESS Key
-        </button>
-    </div>
-
-    <div class="box">
-        <h3>Starlink Old Bypass</h3>
-        <button class="btn" onclick="copyKey('vless://STARLINK-OLD-BYPASS-KEY')">
-            COPY VLESS Key
-        </button>
-    </div>
-
-    <div class="box">
-        <h3>Dtac No-pro Mytel 4g 1am end</h3>
-        <button class="btn" onclick="copyKey('vless://DTAC-NOPRO-KEY')">
-            COPY VLESS Key
-        </button>
-    </div>
-
+<!-- LOGO IMAGE -->
+<div class="logo">
+    <img src="https://raw.githubusercontent.com/Khansi77/Ssh-key-vd/refs/heads/main/images.png" alt="YO PLUS Logo">
 </div>
 
-<script>
-function copyKey(text) {
-    navigator.clipboard.writeText(text).then(() => {
-        alert("VLESS Key Copied!");
-    }).catch(() => {
-        alert("Copy failed!");
-    });
-}
-</script>
+<div class="title">SERVER IS RUNNING</div>
+<div class="status">| Status: Active</div>
+
+<div class="box">
+    <h3>Ais 64Kbps</h3>
+    <button class="btn" onclick="copyKey('vless://0eadb1f1-8adb-456e-b37d-4a687eec131f@162.159.153.41:443?...')">
+        COPY VLESS Key
+    </button>
+</div>
+
+<div class="box">
+    <h3>True Vdo</h3>
+    <button class="btn" onclick="copyKey('vless://TRUE-VDO-KEY-HERE')">
+        COPY VLESS Key
+    </button>
+</div>
+
+<div class="box">
+    <h3>Starlink Old Bypass</h3>
+    <button class="btn" onclick="copyKey('vless://STARLINK-OLD-BYPASS-KEY')">
+        COPY VLESS Key
+    </button>
+</div>
+
+<div class="box">
+    <h3>Dtac No-pro Mytel 4g 1am end</h3>
+    <button class="btn" onclick="copyKey('vless://DTAC-NOPRO-KEY')">
+        COPY VLESS Key
+    </button>
+</div>
 
 </body>
 </html>
