@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Server Status</title>
+
+<style>
+    :root {
+        --main-color: #00ccff;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--main-color);
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 380px;
+        padding: 25px 20px;
+        border-radius: 18px;
+        border: 2px solid var(--main-color);
+        box-shadow: 0 0 25px var(--main-color);
+        text-align: center;
+    }
+
+    .logo-wrapper {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        padding: 5px;
+        background: linear-gradient(270deg, #00ccff, #00ffcc, #0099ff);
+        background-size: 600% 600%;
+        animation: neonRotate 4s linear infinite;
+        box-shadow: 0 0 15px var(--main-color), 0 0 30px var(--main-color);
+    }
+
+    .logo-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        background: #000;
+    }
+
+    @keyframes neonRotate {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+        margin: 5px 0 0;
+        font-size: 22px;
+        text-shadow: 0 0 10px var(--main-color);
+    }
+
+    .status {
+        color: #aaa;
+        margin-top: 6px;
+        font-size: 13px;
+    }
+
+    .divider {
+        height: 1px;
+        background: var(--main-color);
+        margin: 18px 0;
+        opacity: 0.4;
+    }
+
+    .box {
+        border: 2px dashed var(--main-color);
+        border-radius: 14px;
+        padding: 18px;
+        margin-bottom: 18px;
+    }
+
+    .box h2 {
+        margin: 0 0 12px;
+        font-size: 17px;
+        color: #fff;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 13px;
+        border-radius: 12px;
+        background: var(--main-color);
+        color: #000;
+        font-weight: bold;
+        border: none;
+        font-size: 14px;
+        cursor: pointer;
+        box-shadow: 0 0 15px var(--main-color);
+    }
+
+    .btn:active {
+        transform: scale(0.97);
+    }
+
+    .music {
+        margin-top: 10px;
+        background: #111;
+        border-radius: 12px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    audio {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    @media (max-width: 360px) {
+        h1 { font-size: 20px; }
+        .logo-wrapper { width: 100px; height: 100px; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo-wrapper">
+        <img src="https://raw.githubusercontent.com/yawlawt/YTPlusVip/main/images/icon.png" alt="Lawt Aung Logo">
+    </div>
+
+    <h1>SERVER IS RUNNING</h1>
+    <div class="status">| Status: Active</div>
+
+    <div class="divider"></div>
+
+    <!--  VLESS CONFIG 1 -->
+    <div class="box">
+        <h2>Ais 64Kbps </h2>
+        <button class="btn" onclick="copyText('vless://0eadb1f1-8adb-456e-b37d-4a687eec131f@162.159.153.41:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&insecure=1&host=www.speedtest.net-yaw.lawtaung.de5.net&fp=random&type=ws&allowInsecure=1&sni=www.speedtest.net-yaw.lawtaung.de5.net#Ais%2064Kbps%20Cf')">
+            COPY VLESS KeY
+        </button>
+    </div>
+
+    <!--  VLESS CONFIG 2 -->
+    <div class="box">
+        <h2>True Vdo  </h2>
+        <button class="btn" onclick="copyText('vless://0eadb1f1-8adb-456e-b37d-4a687eec131f@support.zoom.us:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&insecure=1&host=www.speedtest.net-yaw.lawtaung.de5.net&fp=random&type=ws&allowInsecure=1&sni=www.speedtest.net-yaw.lawtaung.de5.net#True%20Vdo')">
+            COPY VLESS KeY
+        </button>
+    </div>
+
+    <!--  VLESS CONFIG 3 -->
+    <div class="box">
+        <h2>Starlink Old Bypass </h2>
+        <button class="btn" onclick="copyText('vless://db16552d-467b-48e5-ec8d-81226ac0c594@43.249.32.10:80?path=%2Fyt&security=none&encryption=none&host=portal-as.ruijienetworks.com&type=ws#YT%20Plus%20StarLink%20Bypass')">
+            COPY VLESS KeY
+        </button>
+    </div>
+
+    <!--  VLESS CONFIG 4 -->
+    <div class="box">
+        <h2>Dtac No-pro Mytel 4g 1am end </h2>
+        <button class="btn" onclick="copyText('vless://ba0e3984-ccc9-48a3-8074-b2f507f41ce8@vpn.googleapis.com:443?path=%2F%40nkka404&security=tls&encryption=none&host=dtac-104434757998.us-central1.run.app&type=ws&sni=dtac-104434757998.us-central1.run.app#CHANNEL-404-VLESS-WS')">
+            COPY VLESS KeY
+        </button>
+    </div>
+
+    <div class="box">
+        <h2>Dtac Game(NetMoD) </h2>
+        <button class="btn" onclick="copyText('nm-ssh://3s4jZPwyRbcy19wVX6EWokiBV1gqLezwPUiWdAqPTLwsHVkiK979a/h5EW97PRGwS9m6B/czyX
