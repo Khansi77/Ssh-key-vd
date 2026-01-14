@@ -63,68 +63,88 @@ body {
 
 <div class="container">
 
-    <div class="logo">
-        <img src="https://raw.githubusercontent.com/Khansi77/Ssh-key-vd/refs/heads/main/images%20(3).png">
-    </div>
+<div class="logo">
+    <img src="https://raw.githubusercontent.com/Khansi77/Ssh-key-vd/refs/heads/main/images%20(3).png">
+</div>
 
-    <div class="title">SERVER IS RUNNING</div>
-    <div class="status">| Status: Active</div>
+<div class="title">SERVER IS RUNNING</div>
+<div class="status">| Status: Active</div>
 
-    <!-- MUSIC -->
-    <button class="music-btn" onclick="toggleMusic()"> Music ON / OFF</button>
+<button class="music-btn" onclick="toggleMusic()">Music ON / OFF</button>
 
-    <audio id="bgMusic" loop>
-        <source src="https://codeberg.org/khansi/mp31/raw/branch/main/_%E1%80%9B%E1%80%80%E1%80%BA%E1%80%9D%E1%80%B1%E1%80%B8%E1%80%99%E1%80%B0__%E1%80%9B%E1%80%BD%E1%80%85%E1%80%BA-%E1%80%81%E1%80%BD%E1%80%94%E1%80%BA%E1%80%96%E1%80%AD%E1%80%AF%E1%80%B8%E1%80%99%E1%80%B1%E1%80%AC%E1%80%84%E1%80%BA%28256k%29.mp3" type="audio/mpeg">
-    </audio>
+<audio id="bgMusic" loop>
+    <source src="https://codeberg.org/khansi/mp31/raw/branch/main/_%E1%80%9B%E1%80%80%E1%80%BA%E1%80%9D%E1%80%B1%E1%80%B8%E1%80%99%E1%80%B0__%E1%80%9B%E1%80%BD%E1%80%85%E1%80%BA-%E1%80%81%E1%80%BD%E1%80%94%E1%80%BA%E1%80%96%E1%80%AD%E1%80%AF%E1%80%B8%E1%80%99%E1%80%B1%E1%80%AC%E1%80%84%E1%80%BA%28256k%29.mp3" type="audio/mpeg">
+</audio>
 
-    <div class="box">
-        <h3>Ais 64Kbps</h3>
-        <button class="btn" onclick="copyKey('vless://0eadb1f1-8adb-456e-b37d-4a687eec131f@162.159.153.41:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=www.speedtest.net-yaw.lawtaung.de5.net&fp=random&type=ws&sni=www.speedtest.net-yaw.lawtaung.de5.net#Ais%2064Kbps%20Cf')">COPY VLESS Key</button>
-    </div>
+<!-- AIS -->
+<div class="box">
+    <h3>Ais 64Kbps</h3>
+    <button class="btn" onclick="copyKey(`vless://0eadb1f1-8adb-456e-b37d-4a687eec131f@162.159.153.41:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=www.speedtest.net-yaw.lawtaung.de5.net&fp=random&type=ws&sni=www.speedtest.net-yaw.lawtaung.de5.net#Ais%2064Kbps%20Cf`)">COPY KEY</button>
+</div>
 
-    <div class="box">
-        <h3>True Vdo</h3>
-        <button class="btn" onclick="copyKey('vless://TRUE-KEY')">COPY VLESS Key</button>
-    </div>
+<!-- TRUE VOD -->
+<div class="box">
+    <h3>True VOD</h3>
+    <button class="btn" onclick="copyKey(`PUT_TRUE_VOD_KEY_HERE`)">COPY KEY</button>
+</div>
 
-    <div class="box">
-        <h3>Starlink Old Bypass</h3>
-        <button class="btn" onclick="copyKey('vless://STARLINK-KEY')">COPY VLESS Key</button>
-    </div>
+<!-- DTAC NO PRO -->
+<div class="box">
+    <h3>Dtac No-Pro (Mytel 4G Bypass)</h3>
+    <button class="btn" onclick="copyKey(`PUT_DTAC_NOPRO_KEY_HERE`)">COPY KEY</button>
+</div>
 
-    <div class="box">
-        <h3>Dtac No-Pro Mytel 4G (1AM End)</h3>
-        <button class="btn" onclick="copyKey('vless://DTAC-NOPRO-KEY')">COPY VLESS Key</button>
-    </div>
+<!-- DTAC GAMEPLANE -->
+<div class="box">
+    <h3>Dtac Gameplane</h3>
+    <button class="btn" onclick="copyKey(`nm-ssh://ykK9afcfX50PTLtyAO83FpLpyVEd5snQJQKOLs0jpu/Vj8GTmCKxkppwYDfVsP+L8Te0Qh7nHG/Qkv0YDfhTI6bHW0x0dFxgv40bFzrnNsc33NKwf4mE4m8iTQKwDST8NKJ0eKNIS1vA2VdcLMj3ZdCLP7cabWKBpmDpSjvBH3XXEog1cAXfgDS3KW4+SpArm58yxr3wKSdL/Yrtec1MNSoJgy12MM6mK99eZqjddX3hi1U740s8PlvEikcNrA1Ay4VWGOQYBEvh6SytZFbTD+5k3OIbb8RnYxvBmVnYoXEMCkGwv/Gz1ND+OwEftgX33WAIHe7uIx3styKUW53q/icVj85QCTFkAMXDjAJbe9LwhUu9pFbsNDIhXnPAIxkV3lQzYJ9G+SvWMzijUnQAbcsLHUWyEmdJNJs+C3xFYAHvtwY2rR8fgEkYXDNUv2dKENB5iWCR4ulxx3fvS6kX811Ra1HUqXNOdy07UQOqU1JbFBgufp0/A7KXDZ6YopLutWjACsbQ+npQ4CO+JBV1A1oUFBTZ3qTcLgMp6KfgY9urkHBs3f8HnRaugjt+vthKREOgEoGD42Elz2EuJKTvJQhV7XMcuy+7+HRVXtxoTXWtD1ZdhygigSWSKuDSBuvNC20Dt5/Xc2rq2GQsrLZkI/6xfM/2xP1txSsOAxOVL8QSPzJ8IkyYmBqx5km+9dgn`)">COPY KEY</button>
+</div>
 
-    <div class="box">
-        <h3>Dtac Gameplane</h3>
-        <button class="btn" onclick="copyKey('nm-ssh://ykK9afcfX50PTLtyAO83FpLpyVEd5snQJQKOLs0jpu/Vj8GTmCKxkppwYDfVsP+L8Te0Qh7nHG/Qkv0YDfhTI6bHW0x0dFxgv40bFzrnNsc33NKwf4mE4m8iTQKwDST8NKJ0eKNIS1vA2VdcLMj3ZdCLP7cabWKBpmDpSjvBH3XXEog1cAXfgDS3KW4+SpArm58yxr3wKSdL/Yrtec1MNSoJgy12MM6mK99eZqjddX3hi1U740s8PlvEikcNrA1Ay4VWGOQYBEvh6SytZFbTD+5k3OIbb8RnYxvBmVnYoXEMCkGwv/Gz1ND+OwEftgX33WAIHe7uIx3styKUW53q/icVj85QCTFkAMXDjAJbe9LwhUu9pFbsNDIhXnPAIxkV3lQzYJ9G+SvWMzijUnQAbcsLHUWyEmdJNJs+C3xFYAHvtwY2rR8fgEkYXDNUv2dKENB5iWCR4ulxx3fvS6kX811Ra1HUqXNOdy07UQOqU1JbFBgufp0/A7KXDZ6YopLutWjACsbQ+npQ4CO+JBV1A1oUFBTZ3qTcLgMp6KfgY9urkHBs3f8HnRaugjt+vthKREOgEoGD42Elz2EuJKTvJQhV7XMcuy+7+HRVXtxoTXWtD1ZdhygigSWSKuDSBuvNC20Dt5/Xc2rq2GQsrLZkI/6xfM/2xP1txSsOAxOVL8QSPzJ8IkyYmBqx5km+9dgn')">COPY VLESS Key</button>
-    </div>
+<!-- DTAC ZIVPN -->
+<div class="box">
+    <h3>Dtac ZiVPN Jaidee</h3>
+    <button class="btn" onclick="copyKey(`PUT_ZIVPN_KEY_HERE`)">COPY KEY</button>
+</div>
 
-    <div class="box">
-        <h3>Dtac ZiVPN jaidee</h3>
-        <button class="btn" onclick="copyKey('vless://DTAC-ZIVPN-KEY')">COPY VLESS Key</button>
-    </div>
+<!-- STARLINK -->
+<div class="box">
+    <h3>Starlink Old Bypass</h3>
+    <button class="btn" onclick="copyKey(`PUT_STARLINK_KEY_HERE`)">COPY KEY</button>
+</div>
 
 </div>
 
 <script>
 function copyKey(text) {
-    navigator.clipboard.writeText(text);
-    alert("VLESS Key Copied!");
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(showCopied).catch(() => fallbackCopy(text));
+    } else {
+        fallbackCopy(text);
+    }
+}
+
+function fallbackCopy(text) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.left = "-9999px";
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    document.execCommand("copy");
+    document.body.removeChild(ta);
+    showCopied();
+}
+
+function showCopied() {
+    alert("KEY COPIED SUCCESSFULLY!");
 }
 
 let playing = false;
 function toggleMusic() {
-    const music = document.getElementById("bgMusic");
-    if (!playing) {
-        music.play();
-        playing = true;
-    } else {
-        music.pause();
-        playing = false;
-    }
+    const m = document.getElementById("bgMusic");
+    playing ? m.pause() : m.play();
+    playing = !playing;
 }
 </script>
 
