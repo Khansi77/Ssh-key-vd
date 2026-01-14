@@ -96,7 +96,6 @@ body{
 <body>
 <div class="container">
 
-    <!-- LOGO -->
     <div class="logo">
         <img src="https://raw.githubusercontent.com/Khansi77/Ssh-key-vd/refs/heads/main/images%20(3).png">
     </div>
@@ -104,7 +103,6 @@ body{
     <div class="status-title">SERVER IS RUNNING</div>
     <div class="status-sub">| Status: Active</div>
 
-    <!-- CONFIG BOXES -->
     <div class="box">
         <h3>Ais 64Kbps</h3>
         <button class="btn" onclick="copyText('vless://0eadb1f1-8adb-456e-b37d-4a687eec131f@162.159.153.41:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=www.speedtest.net-yaw.lawtaung.de5.net&fp=random&type=ws&sni=www.speedtest.net-yaw.lawtaung.de5.net#Ais%2064Kbps%20Cf')">COPY VLESS Key</button>
@@ -140,7 +138,6 @@ body{
         <button class="btn" onclick="copyText('UDP_KEY_HERE')">COPY UDP Key</button>
     </div>
 
-    <!-- MUSIC -->
     <div class="music">
         <span>🎵 Background Music</span>
         <audio controls loop style="width:100%; margin-top:8px;">
@@ -152,9 +149,36 @@ body{
 
 <script>
 function copyText(text){
-    navigator.clipboard.writeText(text).then(()=>{
+    // Modern browsers
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(function(){
+            alert("Copied Successfully!");
+        }).catch(function(){
+            fallbackCopy(text);
+        });
+    } else {
+        // Messenger / In-App Browser fallback
+        fallbackCopy(text);
+    }
+}
+
+function fallbackCopy(text){
+    var textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.style.position = "fixed";
+    textarea.style.opacity = "0";
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+
+    try{
+        document.execCommand("copy");
         alert("Copied Successfully!");
-    });
+    }catch(e){
+        alert("Copy failed, long-press to copy");
+    }
+
+    document.body.removeChild(textarea);
 }
 </script>
 
