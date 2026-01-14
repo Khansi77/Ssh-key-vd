@@ -3,148 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <title>YO PLUS Server Status</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-    background: #0b0f1a;
+body{
+    margin:0;
     font-family: Arial, sans-serif;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    padding: 30px;
+    background:#020702;
+    color:#fff;
+    display:flex;
+    justify-content:center;
 }
 
-.container {
-    width: 360px;
-    background: #11162a;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0,255,255,0.15);
+.container{
+    width:360px;
+    padding:20px;
+    text-align:center;
 }
 
-.logo { text-align: center; margin-bottom: 10px; }
-.logo img { width: 130px; filter: drop-shadow(0 0 15px rgba(0,255,255,0.7)); }
-
-.title { text-align: center; font-size: 16px; color: #00ff88; }
-.status { text-align: center; margin-bottom: 15px; color: #aaa; }
-
-.music-btn {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 6px;
-    background: linear-gradient(90deg,#ffcc00,#ff8800);
-    font-weight: bold;
-    cursor: pointer;
+/* LOGO */
+.logo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    margin:auto;
+    box-shadow:0 0 30px #00ff66;
+}
+.logo img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
 }
 
-.box {
-    background: #0d1326;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 12px;
+/* STATUS */
+.status-title{
+    color:#00ff66;
+    font-size:22px;
+    margin-top:15px;
+    text-shadow:0 0 10px #00ff66;
 }
-.box h3 { margin: 0 0 10px; font-size: 14px; color: #00ffe1; }
+.status-sub{
+    color:#9cffb8;
+    margin-bottom:20px;
+}
 
-.btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    background: linear-gradient(90deg,#00ffe1,#00ff88);
-    font-weight: bold;
-    cursor: pointer;
+/* BOX */
+.box{
+    border:2px dashed #00ff66;
+    border-radius:16px;
+    padding:15px;
+    margin-bottom:15px;
+    box-shadow:0 0 18px rgba(200,0,255,0.45);
+    background:rgba(255,255,255,0.02);
+}
+.box h3{
+    margin:0 0 12px;
+    font-weight:normal;
+    color:#ffd6ff;
+}
+
+/* BUTTON */
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+    color:#000;
+    background:linear-gradient(90deg,#00ff66,#6aff9c);
+    box-shadow:0 0 18px #c800ff;
+}
+.btn:active{
+    transform:scale(0.96);
+}
+
+/* MUSIC */
+.music{
+    margin-top:20px;
+    padding:12px;
+    border-radius:16px;
+    background:#120015;
+    box-shadow:0 0 15px #c800ff;
+}
+.music span{
+    color:#ff4dff;
+    text-shadow:0 0 8px #c800ff;
 }
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<div class="logo">
-    <img src="https://raw.githubusercontent.com/Khansi77/Ssh-key-vd/refs/heads/main/images%20(3).png">
-</div>
+    <!-- LOGO -->
+    <div class="logo">
+        <img src="https://raw.githubusercontent.com/Khansi77/Ssh-key-vd/refs/heads/main/images%20(3).png">
+    </div>
 
-<div class="title">SERVER IS RUNNING</div>
-<div class="status">| Status: Active</div>
+    <div class="status-title">SERVER IS RUNNING</div>
+    <div class="status-sub">| Status: Active</div>
 
-<button class="music-btn" onclick="toggleMusic()">Music ON / OFF</button>
+    <!-- CONFIG BOXES -->
+    <div class="box">
+        <h3>Ais 64Kbps</h3>
+        <button class="btn" onclick="copyText('vless://0eadb1f1-8adb-456e-b37d-4a687eec131f@162.159.153.41:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=www.speedtest.net-yaw.lawtaung.de5.net&fp=random&type=ws&sni=www.speedtest.net-yaw.lawtaung.de5.net#Ais%2064Kbps%20Cf')">COPY VLESS Key</button>
+    </div>
 
-<audio id="bgMusic" loop>
-    <source src="https://codeberg.org/khansi/mp31/raw/branch/main/_%E1%80%9B%E1%80%80%E1%80%BA%E1%80%9D%E1%80%B1%E1%80%B8%E1%80%99%E1%80%B0__%E1%80%9B%E1%80%BD%E1%80%85%E1%80%BA-%E1%80%81%E1%80%BD%E1%80%94%E1%80%BA%E1%80%96%E1%80%AD%E1%80%AF%E1%80%B8%E1%80%99%E1%80%B1%E1%80%AC%E1%80%84%E1%80%BA%28256k%29.mp3" type="audio/mpeg">
-</audio>
+    <div class="box">
+        <h3>True Vdo</h3>
+        <button class="btn" onclick="copyText('VLESS_KEY_HERE')">COPY VLESS Key</button>
+    </div>
 
-<!-- AIS -->
-<div class="box">
-    <h3>Ais 64Kbps</h3>
-    <button class="btn" onclick="copyKey(`vless://0eadb1f1-8adb-456e-b37d-4a687eec131f@162.159.153.41:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=www.speedtest.net-yaw.lawtaung.de5.net&fp=random&type=ws&sni=www.speedtest.net-yaw.lawtaung.de5.net#Ais%2064Kbps%20Cf`)">COPY KEY</button>
-</div>
+    <div class="box">
+        <h3>Starlink Old Bypass</h3>
+        <button class="btn" onclick="copyText('VLESS_KEY_HERE')">COPY VLESS Key</button>
+    </div>
 
-<!-- TRUE VOD -->
-<div class="box">
-    <h3>True VOD</h3>
-    <button class="btn" onclick="copyKey(`PUT_TRUE_VOD_KEY_HERE`)">COPY KEY</button>
-</div>
+    <div class="box">
+        <h3>Dtac No-pro Mytel 4g 1am end</h3>
+        <button class="btn" onclick="copyText('VLESS_KEY_HERE')">COPY VLESS Key</button>
+    </div>
 
-<!-- DTAC NO PRO -->
-<div class="box">
-    <h3>Dtac No-Pro (Mytel 4G Bypass)</h3>
-    <button class="btn" onclick="copyKey(`PUT_DTAC_NOPRO_KEY_HERE`)">COPY KEY</button>
-</div>
+    <div class="box">
+        <h3>Myanmar For Outline</h3>
+        <button class="btn" onclick="copyText('OUTLINE_KEY_HERE')">COPY Outline Key</button>
+    </div>
 
-<!-- DTAC GAMEPLANE -->
-<div class="box">
-    <h3>Dtac Gameplane</h3>
-    <button class="btn" onclick="copyKey(`nm-ssh://ykK9afcfX50PTLtyAO83FpLpyVEd5snQJQKOLs0jpu/Vj8GTmCKxkppwYDfVsP+L8Te0Qh7nHG/Qkv0YDfhTI6bHW0x0dFxgv40bFzrnNsc33NKwf4mE4m8iTQKwDST8NKJ0eKNIS1vA2VdcLMj3ZdCLP7cabWKBpmDpSjvBH3XXEog1cAXfgDS3KW4+SpArm58yxr3wKSdL/Yrtec1MNSoJgy12MM6mK99eZqjddX3hi1U740s8PlvEikcNrA1Ay4VWGOQYBEvh6SytZFbTD+5k3OIbb8RnYxvBmVnYoXEMCkGwv/Gz1ND+OwEftgX33WAIHe7uIx3styKUW53q/icVj85QCTFkAMXDjAJbe9LwhUu9pFbsNDIhXnPAIxkV3lQzYJ9G+SvWMzijUnQAbcsLHUWyEmdJNJs+C3xFYAHvtwY2rR8fgEkYXDNUv2dKENB5iWCR4ulxx3fvS6kX811Ra1HUqXNOdy07UQOqU1JbFBgufp0/A7KXDZ6YopLutWjACsbQ+npQ4CO+JBV1A1oUFBTZ3qTcLgMp6KfgY9urkHBs3f8HnRaugjt+vthKREOgEoGD42Elz2EuJKTvJQhV7XMcuy+7+HRVXtxoTXWtD1ZdhygigSWSKuDSBuvNC20Dt5/Xc2rq2GQsrLZkI/6xfM/2xP1txSsOAxOVL8QSPzJ8IkyYmBqx5km+9dgn`)">COPY KEY</button>
-</div>
+    <div class="box">
+        <h3>Dtac Game (NetMoD)</h3>
+        <button class="btn" onclick="copyText('nm-ssh://ykK9afcfX50PTLtyAO83FpLpyVEd5snQJQKOLs0jpu/Vj8GTmCKxkppwYDfVsP+L8Te0Qh7nHG/Qkv0YDfhTI6bHW0x0dFxgv40bFzrnNsc33NKwf4mE4m8iTQKwDST8NKJ0eKNIS1vA2VdcLMj3ZdCLP7cabWKBpmDpSjvBH3XXEog1cAXfgDS3KW4+SpArm58yxr3wKSdL/Yrtec1MNSoJgy12MM6mK99eZqjddX3hi1U740s8PlvEikcNrA1Ay4VWGOQYBEvh6SytZFbTD+5k3OIbb8RnYxvBmVnYoXEMCkGwv/Gz1ND+OwEftgX33WAIHe7uIx3styKUW53q/icVj85QCTFkAMXDjAJbe9LwhUu9pFbsNDIhXnPAIxkV3lQzYJ9G+SvWMzijUnQAbcsLHUWyEmdJNJs+C3xFYAHvtwY2rR8fgEkYXDNUv2dKENB5iWCR4ulxx3fvS6kX811Ra1HUqXNOdy07UQOqU1JbFBgufp0/A7KXDZ6YopLutWjACsbQ+npQ4CO+JBV1A1oUFBTZ3qTcLgMp6KfgY9urkHBs3f8HnRaugjt+vthKREOgEoGD42Elz2EuJKTvJQhV7XMcuy+7+HRVXtxoTXWtD1ZdhygigSWSKuDSBuvNC20Dt5/Xc2rq2GQsrLZkI/6xfM/2xP1txSsOAxOVL8QSPzJ8IkyYmBqx5km+9dgn')">COPY SSH Key</button>
+    </div>
 
-<!-- DTAC ZIVPN -->
-<div class="box">
-    <h3>Dtac ZiVPN Jaidee</h3>
-    <button class="btn" onclick="copyKey(`PUT_ZIVPN_KEY_HERE`)">COPY KEY</button>
-</div>
+    <div class="box">
+        <h3>Dtac Jaidee (ZiVPN)</h3>
+        <button class="btn" onclick="copyText('UDP_KEY_HERE')">COPY UDP Key</button>
+    </div>
 
-<!-- STARLINK -->
-<div class="box">
-    <h3>Starlink Old Bypass</h3>
-    <button class="btn" onclick="copyKey(`PUT_STARLINK_KEY_HERE`)">COPY KEY</button>
-</div>
+    <!-- MUSIC -->
+    <div class="music">
+        <span>🎵 Background Music</span>
+        <audio controls loop style="width:100%; margin-top:8px;">
+            <source src="https://codeberg.org/khansi/mp31/raw/branch/main/_%E1%80%9B%E1%80%80%E1%80%BA%E1%80%9D%E1%80%B1%E1%80%B8%E1%80%99%E1%80%B0__%E1%80%9B%E1%80%BD%E1%80%85%E1%80%BA-%E1%80%81%E1%80%BD%E1%80%94%E1%80%BA%E1%80%96%E1%80%AD%E1%80%AF%E1%80%B8%E1%80%99%E1%80%B1%E1%80%AC%E1%80%84%E1%80%BA%28256k%29.mp3">
+        </audio>
+    </div>
 
 </div>
 
 <script>
-function copyKey(text) {
-    if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text).then(showCopied).catch(() => fallbackCopy(text));
-    } else {
-        fallbackCopy(text);
-    }
-}
-
-function fallbackCopy(text) {
-    const ta = document.createElement("textarea");
-    ta.value = text;
-    ta.style.position = "fixed";
-    ta.style.left = "-9999px";
-    document.body.appendChild(ta);
-    ta.focus();
-    ta.select();
-    document.execCommand("copy");
-    document.body.removeChild(ta);
-    showCopied();
-}
-
-function showCopied() {
-    alert("KEY COPIED SUCCESSFULLY!");
-}
-
-let playing = false;
-function toggleMusic() {
-    const m = document.getElementById("bgMusic");
-    playing ? m.pause() : m.play();
-    playing = !playing;
+function copyText(text){
+    navigator.clipboard.writeText(text).then(()=>{
+        alert("Copied Successfully!");
+    });
 }
 </script>
 
