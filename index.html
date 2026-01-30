@@ -13,12 +13,16 @@
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    background:#020702;
     color:#fff;
     display:flex;
     justify-content:center;
-}
-.container{
+
+    /* ✅ GitHub PNG background */
+    background-image: url("https://raw.githubusercontent.com/Khansi77/Ssh-key-vd/refs/heads/main/file_000000000924720893417f8c9c739b48.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}.container{
     width:360px;
     padding:20px;
     text-align:center;
@@ -54,9 +58,13 @@ body{
     background:rgba(255,255,255,0.02);
 }
 .box h3{
-    margin:0 0 12px;
-    font-weight:normal;
-    color:#ffd6ff;
+  margin:0 0 12px;
+  font-weight:normal;
+
+  color: #ffffff;
+  text-shadow: 
+    0 0 6px #00eaff,
+    0 0 12px #7a00ff;
 }
 .btn{
     width:100%;
@@ -65,9 +73,10 @@ body{
     border-radius:12px;
     font-size:16px;
     cursor:pointer;
-    color:#000;
-    background:linear-gradient(90deg,#00ff66,#6aff9c);
-    box-shadow:0 0 18px #c800ff;
+
+    background: linear-gradient(90deg,#00eaff,#7a00ff);
+    color:#fff;
+    box-shadow: 0 0 15px #00eaff, 0 0 30px #7a00ff;
 }
 .btn:active{
     transform:scale(0.96);
@@ -98,7 +107,7 @@ body{
 
 <div class="box">
 <h3>Ais 64Kbps</h3>
-<button class="btn" onclick="copyText('vless://c87a9829-3f69-489a-c373-537bf6e91ad7@43.228.85.246:8080?path=%2F&security=none&encryption=none&host=www.speedtest.net&type=ws#Si-Ais%28100gb%29')">COPY VLESS Key</button>
+<button class="btn" onclick="copyText('vless://fd6865ae-e596-416e-93cc-256a6016b98d@43.228.85.246:8080?path=%2F&security=none&encryption=none&host=www.speedtest.net&type=ws#Si-Ais%28500gb%29')">COPY VLESS Key</button>
 </div>
 
 <div class="box">
